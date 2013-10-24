@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="starling" basedir="../.." default="build">
+<project name="common-as3" basedir="../.." default="build">
 
     <property name="FLEX_HOME" location="/Applications/Adobe Flash Builder 4.7/sdks/4.6.0"/>
     <property name="CLASS_LIBRARY" location="/Users/rayyee/ClassLibrary"/>
