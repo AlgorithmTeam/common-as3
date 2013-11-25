@@ -4,7 +4,7 @@
 package common.mathematics
 {
 	/**
-	 * 2d vector crossproduct 
+	 * 2d vector cross product
 	 * 
 	 * 		PointC on lineAB left or right
 	 * 			cross2( v(B-A), v(C-A) )
