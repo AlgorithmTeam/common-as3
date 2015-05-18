@@ -34,31 +34,24 @@ package common.signal
 		
 		public function removeAll() : void
 		{
-			var lisen:ListenerNode;
-			for (var i:* in _listeners)
+			for each(var listener:ListenerNode in _listeners)
 			{
-				lisen = _listeners[i];
-				if (lisen)
-				{
-					delete _listeners[i];
-					_listeners[i] = null;
-				}
+				remove(listener.res);
 			}
 		}
 		
 		public function dispatch(...objects) : void
 		{
-			var lisen:ListenerNode;
+			var listener:ListenerNode;
 			for (var i:* in _listeners)
 			{
-				lisen = _listeners[i];
-				if (lisen)
+				listener = _listeners[i];
+				if (listener)
 				{
-					lisen.res.apply(null, objects);	
-					if (lisen.once)
+					listener.res.apply(null, objects);	
+					if (listener.once)
 					{
-						delete _listeners[i];
-						_listeners[i] = null;
+						remove(listener.res);
 					}
 				}
 			}
